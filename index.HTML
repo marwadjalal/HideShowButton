@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility</title>
+    <style>
+        #myBtn{
+            font-size:2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="myBox">
+        <img src="loto.jpg" width="400px" id="myImg"><br>
+
+        <button id="myBtn">Hide</button><br>
+
+        
+    </div>
+    <script>
+        const  myBtn = document.getElementById("myBtn");
+        const  myImg = document.getElementById("myImg");
+
+        myBtn.addEventListener("click", event => {
+            if(myImg.style.visibility === "hidden"){
+                myImg.style.visibility= "visible";
+                myBtn.textContent = "Hide";
+            }
+            else{
+                myImg.style.visibility = "hidden";
+                myBtn.textContent = "Show";
+            }
+            
+        })
+    </script>
+</body>
+</html>
